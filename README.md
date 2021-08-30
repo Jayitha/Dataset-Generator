@@ -3,7 +3,7 @@ Generated multi-dimensional correlated, anti-correlated and independent datasets
 
 ## Method
 
-This code is capable of generating 3 kinds of datasets - `INDEP` (independent), `CORR` (correlated) and `ANIT` (anti-correlated) datasets. The domain of each attribute / dimension is from $[0, 1)$. The code needs to be provided with the dimensionality and cardinality of the dataset to be generated. 
+This code is capable of generating 3 kinds of datasets - `INDEP` (independent), `CORR` (correlated) and `ANTI` (anti-correlated) datasets. The domain of each attribute / dimension is from $[0, 1)$. The code needs to be provided with the dimensionality and cardinality of the dataset to be generated. 
 
 - `IND` - every attribute is distributed independently of every other attribute. A uniform distribution is used to generate values
 
