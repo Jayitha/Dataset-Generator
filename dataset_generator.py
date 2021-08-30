@@ -35,7 +35,6 @@ for i in range(dimensionality - 1):
     null_A[0,i] = -1
     null_A[i+1,i] = 1
 
-
 def dominates(idx1, idx2):
     point1 = dataset[idx1,:]
     point2 = dataset[idx2,:]
@@ -88,6 +87,7 @@ def data_frame():
 
 def save_data():
     skyline()
+    print("# Skyline Points: ", len(skyline_indices))
     df = data_frame()
     sns.heatmap(df.loc[:, df.columns != 'skyline_status'].corr())
     plt.savefig(DATA_PATH + directory_name + '/heatmap.eps')
@@ -123,7 +123,7 @@ def anti_correlated_dataset_generator():
     while(i < cardinality):
         plane_point = -1
         while(plane_point < 0 or plane_point > 1):
-            plane_point = np.random.normal(0.5, 0.01)
+            plane_point = np.random.normal(0.5, 0.065)
         dataset[i,:] = (plane_point * np.ones((dimensionality, 1)) + np.dot(null_A, np.random.uniform(0, 1, (dimensionality-1, 1)))).T
         if valid(i):
             i = i + 1

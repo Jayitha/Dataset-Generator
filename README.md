@@ -38,10 +38,9 @@ When the command is run, a folder is generated in the `data` folder names `<type
 
 ## Examples
 
-#### `INDEP`
+| Type | Heatmap | Scatterplot |
+|---|---|---|
+| `INDEP` | ![](./examples/indep_heatmap.png) | ![](./examples/indep_scatterplot_matrix.png)|
+| `CORR` | ![](./examples/corr_heatmap.png) | ![](./examples/corr_scatterplot_matrix.png)|
+| `ANTI` | ![](./examples/anti_heatmap.png) | ![](./examples/anti_scatterplot_matrix.png)|
 
-```bash
-python3 dataset_generator.py INDEP 2 100
-```
-
-![](./data/ANTI_2_100_0.1/scatterplot_matrix.eps)
