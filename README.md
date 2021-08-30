@@ -7,13 +7,13 @@ This code is capable of generating 3 kinds of datasets - `INDEP` (independent), 
 
 - `IND` - every attribute is distributed independently of every other attribute. A uniform distribution is used to generate values
 
-- `CORR` - every attributed is correlated with every other attribute. For each data point, a plane within the unit cube is picked perpendicular to the line connecting points $(0,\ldots,0)$ and $(1,\ldots,1)$ using a normal distribution so that most points are concentrated in the middle of the cube rather than at the ends.  Then another normal distribution centered at the point of contact between the plane and the line is used to generate individual attribute values. In the paper - [[The Skyline Operator.pdf]], the point generated has to be on the plane, but I found it hard to tweak the parameters to get satisfying results. 
+- `CORR` - every attributed is correlated with every other attribute. For each data point, a plane within the unit cube is picked perpendicular to the line connecting points (0,...,0) and (1,...,1) using a normal distribution so that most points are concentrated in the middle of the cube rather than at the ends.  Then another normal distribution centered at the point of contact between the plane and the line is used to generate individual attribute values. In the paper - [[The Skyline Operator.pdf]], the point generated has to be on the plane, but I found it hard to tweak the parameters to get satisfying results. 
 
-- `ANTI` - at least one pair of attributes are anti-correlated. Similar to the `CORR` case,  a plane is picked perpendicular to the line joining $(0,\ldots,0)$ and $(1,\ldots,1)$. But this time, the normal distribution used to pick the place uses a very small variance so that most planes are picked near the $0.5$ mark. To generate a point, a point is picked randomly (uniform distribution) from the plane.
+- `ANTI` - at least one pair of attributes are anti-correlated. Similar to the `CORR` case,  a plane is picked perpendicular to the line joining (0,...,0) and (1,...,1). But this time, the normal distribution used to pick the place uses a very small variance so that most planes are picked near the 0.5 mark. To generate a point, a point is picked randomly (uniform distribution) from the plane.
 
 ## Instructions
 
-To generate a $d$-dimensional dataset with $n$ points, parameters need to be passed on the command line from the base directory of this project
+To generate a d-dimensional dataset with n points, parameters need to be passed on the command line from the base directory of this project
 
 ```bash
 python3 dataset_generator.py <type> <dimensionality> <cardinality>
