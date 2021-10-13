@@ -123,7 +123,7 @@ def anti_correlated_dataset_generator():
     while(i < cardinality):
         plane_point = -1
         while(plane_point < 0 or plane_point > 1):
-            plane_point = np.random.normal(0.5, 0.065)
+            plane_point = np.random.normal(0.5, 0.03)
         dataset[i,:] = (plane_point * np.ones((dimensionality, 1)) + np.dot(null_A, np.random.uniform(0, 1, (dimensionality-1, 1)))).T
         if valid(i):
             i = i + 1

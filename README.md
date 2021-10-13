@@ -5,7 +5,7 @@ Generated multi-dimensional correlated, anti-correlated and independent datasets
 
 This code is capable of generating 3 kinds of datasets - `INDEP` (independent), `CORR` (correlated) and `ANTI` (anti-correlated) datasets. The domain of each attribute / dimension is from $[0, 1)$. The code needs to be provided with the dimensionality and cardinality of the dataset to be generated. 
 
-- `IND` - every attribute is distributed independently of every other attribute. A uniform distribution is used to generate values
+- `INDEP` - every attribute is distributed independently of every other attribute. A uniform distribution is used to generate values
 
 - `CORR` - every attributed is correlated with every other attribute. For each data point, a plane within the unit cube is picked perpendicular to the line connecting points (0,...,0) and (1,...,1) using a normal distribution so that most points are concentrated in the middle of the cube rather than at the ends.  Then another normal distribution centered at the point of contact between the plane and the line is used to generate individual attribute values. In the [paper](The Skyline Operator.pdf), the point generated has to be on the plane, but I found it hard to tweak the parameters to get satisfying results. 
 
