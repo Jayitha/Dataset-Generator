@@ -10,6 +10,11 @@ sns.set_theme(style="white")
 
 DATA_PATH = "./data/"
 
+directory = os.path.dirname(DATA_PATH)
+if not os.path.exists(directory):
+    os.makedirs(directory)
+
+
 n = len(sys.argv)
 type = sys.argv[1]
 
